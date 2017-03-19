@@ -149,7 +149,6 @@
 				TargetAttributes = {
 					E3DC5A411E7F12EF00BB018E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9WW69BEYER;
 						ProvisioningStyle = Automatic;
 					};
 					E3DC5A581E7F12EF00BB018E = {
@@ -343,7 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9WW69BEYER;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaloyanit.FZone;
@@ -356,7 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9WW69BEYER;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaloyanit.FZone;
