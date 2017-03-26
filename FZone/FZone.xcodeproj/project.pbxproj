@@ -10,10 +10,11 @@
 		2705B3852F8C133D6C480608 /* Pods_FZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AC973B79234A66E178B03D /* Pods_FZoneTests.framework */; };
 		C30DC040A3FDB5ECDA6C74A4 /* Pods_FZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C802A7495D8EF0911BB4C153 /* Pods_FZone.framework */; };
 		E3067AA21E8843A100784670 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA11E8843A100784670 /* LoginViewController.swift */; };
+		E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA41E884B6200784670 /* HttpRequester.swift */; };
+		E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */; };
 		E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797B1E86B8000004D499 /* LoadingExtensions.swift */; };
 		E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797D1E86C7DA0004D499 /* MainViewController.swift */; };
 		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
-		E353BC8D1E85C82B00DF7573 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */; };
 		E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */; };
 		E3DC5A4B1E7F12EF00BB018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A491E7F12EF00BB018E /* Main.storyboard */; };
 		E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */; };
@@ -39,6 +40,8 @@
 		67AC973B79234A66E178B03D /* Pods_FZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C802A7495D8EF0911BB4C153 /* Pods_FZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3067AA11E8843A100784670 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		E3067AA41E884B6200784670 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = HttpRequester/HttpRequester.swift; sourceTree = "<group>"; };
+		E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequester/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		E34C797B1E86B8000004D499 /* LoadingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingExtensions.swift; path = ViewControllers/Extensions/LoadingExtensions.swift; sourceTree = "<group>"; };
 		E34C797D1E86C7DA0004D499 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		E34C797E1E86C7DA0004D499 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/StartViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		E34C79841E86EF3E0004D499 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E34C79861E86FB2F0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		E34C79881E86FC7D0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
 		E3DC5A421E7F12EF00BB018E /* FZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3DC5A4A1E7F12EF00BB018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,15 @@
 				229FB79A02B188A005CB7AB0 /* Pods-FZoneTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3067AA31E884B2200784670 /* HttpRequester */ = {
+			isa = PBXGroup;
+			children = (
+				E3067AA41E884B6200784670 /* HttpRequester.swift */,
+				E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */,
+			);
+			name = HttpRequester;
 			sourceTree = "<group>";
 		};
 		E34C79781E86B74E0004D499 /* Extensions */ = {
@@ -146,6 +157,7 @@
 		E3DC5A441E7F12EF00BB018E /* FZone */ = {
 			isa = PBXGroup;
 			children = (
+				E3067AA31E884B2200784670 /* HttpRequester */,
 				E361D6841E842C8200F6FAF4 /* ViewControllers */,
 				E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */,
 				E3DC5A491E7F12EF00BB018E /* Main.storyboard */,
@@ -153,7 +165,6 @@
 				E3DC5A511E7F12EF00BB018E /* LaunchScreen.storyboard */,
 				E3DC5A541E7F12EF00BB018E /* Info.plist */,
 				E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */,
-				E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */,
 			);
 			path = FZone;
 			sourceTree = "<group>";
@@ -371,11 +382,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3067AA21E8843A100784670 /* LoginViewController.swift in Sources */,
+				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
 				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
 				E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */,
 				E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */,
-				E353BC8D1E85C82B00DF7573 /* HttpRequester.swift in Sources */,
 				E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */,
+				E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */,
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
