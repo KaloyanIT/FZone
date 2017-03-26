@@ -94,11 +94,29 @@
             </objects>
             <point key="canvasLocation" x="887" y="54"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Ctv-7J-oXf">
+            <objects>
+                <viewController storyboardIdentifier="LoginScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1tb-B1-xL5" customClass="LoginViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9x-Xk-qci"/>
+                        <viewControllerLayoutGuide type="bottom" id="NdY-X5-PQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p1L-zW-y70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzV-MC-bjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1214" y="-573"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qh8-E5-RPO">
             <objects>
                 <navigationController id="v3J-2s-Fy4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9bC-pp-FjR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9bC-pp-FjR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

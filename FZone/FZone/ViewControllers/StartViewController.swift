@@ -20,10 +20,6 @@ class StartViewController: UIViewController {
         startText.center.x = self.view.center.x;
         startButton.center = self.view.center;
         
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
-        
-        view.addSubview(loginButton)
         
         self.http = HttpRequester()        
         //setStartText(text: "Start")
@@ -41,6 +37,7 @@ class StartViewController: UIViewController {
         startText.text = text
     }
     
+        
     @IBAction func changeText(_ sender: Any) {
         setStartText(text: "Clicked")
     }
