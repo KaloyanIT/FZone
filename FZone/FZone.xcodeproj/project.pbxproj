@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2705B3852F8C133D6C480608 /* Pods_FZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AC973B79234A66E178B03D /* Pods_FZoneTests.framework */; };
+		C30DC040A3FDB5ECDA6C74A4 /* Pods_FZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C802A7495D8EF0911BB4C153 /* Pods_FZone.framework */; };
+		E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797B1E86B8000004D499 /* LoadingExtensions.swift */; };
+		E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797D1E86C7DA0004D499 /* MainViewController.swift */; };
+		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
+		E353BC8D1E85C82B00DF7573 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */; };
 		E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */; };
-		E3DC5A481E7F12EF00BB018E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A471E7F12EF00BB018E /* ViewController.swift */; };
 		E3DC5A4B1E7F12EF00BB018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A491E7F12EF00BB018E /* Main.storyboard */; };
 		E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */; };
 		E3DC5A501E7F12EF00BB018E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A4F1E7F12EF00BB018E /* Assets.xcassets */; };
@@ -27,9 +32,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		229FB79A02B188A005CB7AB0 /* Pods-FZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZoneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		48A1C04620F33C07C772134C /* Pods-FZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FZone/Pods-FZone.debug.xcconfig"; sourceTree = "<group>"; };
+		53145586DB843992F6A9C9DB /* Pods-FZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZone.release.xcconfig"; path = "Pods/Target Support Files/Pods-FZone/Pods-FZone.release.xcconfig"; sourceTree = "<group>"; };
+		67AC973B79234A66E178B03D /* Pods_FZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C802A7495D8EF0911BB4C153 /* Pods_FZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34C797B1E86B8000004D499 /* LoadingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingExtensions.swift; path = ViewControllers/Extensions/LoadingExtensions.swift; sourceTree = "<group>"; };
+		E34C797D1E86C7DA0004D499 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		E34C797E1E86C7DA0004D499 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/StartViewController.swift; sourceTree = "<group>"; };
+		E34C79821E86EED60004D499 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E34C79841E86EF3E0004D499 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		E34C79861E86FB2F0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		E34C79881E86FC7D0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
 		E3DC5A421E7F12EF00BB018E /* FZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3DC5A471E7F12EF00BB018E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3DC5A4A1E7F12EF00BB018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3DC5A4D1E7F12EF00BB018E /* FZone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FZone.xcdatamodel; sourceTree = "<group>"; };
 		E3DC5A4F1E7F12EF00BB018E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 		E3DC5A591E7F12EF00BB018E /* FZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A5D1E7F12EF00BB018E /* FZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZoneTests.swift; sourceTree = "<group>"; };
 		E3DC5A5F1E7F12EF00BB018E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61EE40F389BF7EB38747E9C /* Pods-FZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30DC040A3FDB5ECDA6C74A4 /* Pods_FZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +71,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2705B3852F8C133D6C480608 /* Pods_FZoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E84C2D3BB2DE776AA693E82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48A1C04620F33C07C772134C /* Pods-FZone.debug.xcconfig */,
+				53145586DB843992F6A9C9DB /* Pods-FZone.release.xcconfig */,
+				F61EE40F389BF7EB38747E9C /* Pods-FZoneTests.debug.xcconfig */,
+				229FB79A02B188A005CB7AB0 /* Pods-FZoneTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E34C79781E86B74E0004D499 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E34C797B1E86B8000004D499 /* LoadingExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E34C79811E86EED50004D499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E34C79881E86FC7D0004D499 /* FBSDKLoginKit.framework */,
+				E34C79861E86FB2F0004D499 /* FBSDKLoginKit.framework */,
+				E34C79841E86EF3E0004D499 /* FBSDKCoreKit.framework */,
+				E34C79821E86EED60004D499 /* FBSDKShareKit.framework */,
+				C802A7495D8EF0911BB4C153 /* Pods_FZone.framework */,
+				67AC973B79234A66E178B03D /* Pods_FZoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E361D6841E842C8200F6FAF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E34C797D1E86C7DA0004D499 /* MainViewController.swift */,
+				E34C797E1E86C7DA0004D499 /* StartViewController.swift */,
+				E34C79781E86B74E0004D499 /* Extensions */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E3DC5A391E7F12EF00BB018E = {
 			isa = PBXGroup;
 			children = (
 				E3DC5A441E7F12EF00BB018E /* FZone */,
 				E3DC5A5C1E7F12EF00BB018E /* FZoneTests */,
 				E3DC5A431E7F12EF00BB018E /* Products */,
+				E34C79811E86EED50004D499 /* Frameworks */,
+				3E84C2D3BB2DE776AA693E82 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +143,14 @@
 		E3DC5A441E7F12EF00BB018E /* FZone */ = {
 			isa = PBXGroup;
 			children = (
+				E361D6841E842C8200F6FAF4 /* ViewControllers */,
 				E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */,
-				E3DC5A471E7F12EF00BB018E /* ViewController.swift */,
 				E3DC5A491E7F12EF00BB018E /* Main.storyboard */,
 				E3DC5A4F1E7F12EF00BB018E /* Assets.xcassets */,
 				E3DC5A511E7F12EF00BB018E /* LaunchScreen.storyboard */,
 				E3DC5A541E7F12EF00BB018E /* Info.plist */,
 				E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */,
+				E353BC8C1E85C82B00DF7573 /* HttpRequester.swift */,
 			);
 			path = FZone;
 			sourceTree = "<group>";
@@ -106,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3DC5A621E7F12EF00BB018E /* Build configuration list for PBXNativeTarget "FZone" */;
 			buildPhases = (
+				84A565328F318441211ACFC7 /* [CP] Check Pods Manifest.lock */,
 				E3DC5A3E1E7F12EF00BB018E /* Sources */,
 				E3DC5A3F1E7F12EF00BB018E /* Frameworks */,
 				E3DC5A401E7F12EF00BB018E /* Resources */,
+				7B5E9FD5BD16FD7E9CCE3670 /* [CP] Embed Pods Frameworks */,
+				3F203BE5D9D8F1FED1F66E3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3DC5A651E7F12EF00BB018E /* Build configuration list for PBXNativeTarget "FZoneTests" */;
 			buildPhases = (
+				EF27FA78C081BED2EDA9B95A /* [CP] Check Pods Manifest.lock */,
 				E3DC5A551E7F12EF00BB018E /* Sources */,
 				E3DC5A561E7F12EF00BB018E /* Frameworks */,
 				E3DC5A571E7F12EF00BB018E /* Resources */,
+				34DD493E9D8A071F7B359AFA /* [CP] Embed Pods Frameworks */,
+				9318E69E4B4E6E1E94297C61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,14 +269,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34DD493E9D8A071F7B359AFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F203BE5D9D8F1FED1F66E3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FZone/Pods-FZone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B5E9FD5BD16FD7E9CCE3670 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FZone/Pods-FZone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A565328F318441211ACFC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9318E69E4B4E6E1E94297C61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF27FA78C081BED2EDA9B95A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E3DC5A3E1E7F12EF00BB018E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3DC5A481E7F12EF00BB018E /* ViewController.swift in Sources */,
+				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
+				E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */,
 				E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */,
+				E353BC8D1E85C82B00DF7573 /* HttpRequester.swift in Sources */,
 				E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */,
+				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +507,7 @@
 		};
 		E3DC5A631E7F12EF00BB018E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A1C04620F33C07C772134C /* Pods-FZone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -353,6 +521,7 @@
 		};
 		E3DC5A641E7F12EF00BB018E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53145586DB843992F6A9C9DB /* Pods-FZone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -366,6 +535,7 @@
 		};
 		E3DC5A661E7F12EF00BB018E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F61EE40F389BF7EB38747E9C /* Pods-FZoneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -381,6 +551,7 @@
 		};
 		E3DC5A671E7F12EF00BB018E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229FB79A02B188A005CB7AB0 /* Pods-FZoneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +584,7 @@
 				E3DC5A641E7F12EF00BB018E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3DC5A651E7F12EF00BB018E /* Build configuration list for PBXNativeTarget "FZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +593,7 @@
 				E3DC5A671E7F12EF00BB018E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
