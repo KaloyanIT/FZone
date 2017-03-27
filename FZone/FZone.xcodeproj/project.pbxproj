@@ -18,6 +18,7 @@
 		E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351774E1E898C5A00474558 /* FoodTableViewController.swift */; };
 		E35177521E898D8500474558 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177511E898D8500474558 /* Food.swift */; };
 		E35177551E89927C00474558 /* FoodDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177541E89927C00474558 /* FoodDict.swift */; };
+		E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */; };
 		E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */; };
 		E3DC5A4B1E7F12EF00BB018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A491E7F12EF00BB018E /* Main.storyboard */; };
 		E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		E351774E1E898C5A00474558 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTableViewController.swift; path = ViewControllers/FoodTableViewController.swift; sourceTree = "<group>"; };
 		E35177511E898D8500474558 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Models/Food.swift; sourceTree = "<group>"; };
 		E35177541E89927C00474558 /* FoodDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDict.swift; path = Models/DictExtensions/FoodDict.swift; sourceTree = "<group>"; };
+		E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailsViewController.swift; path = ViewControllers/FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		E3DC5A421E7F12EF00BB018E /* FZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3DC5A4A1E7F12EF00BB018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				E34C797E1E86C7DA0004D499 /* StartViewController.swift */,
 				E3067AA11E8843A100784670 /* LoginViewController.swift */,
 				E351774E1E898C5A00474558 /* FoodTableViewController.swift */,
+				E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */,
 				E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */,
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
+				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

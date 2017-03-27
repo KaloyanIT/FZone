@@ -31,6 +31,14 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
         self.http?.get(fromUrl: self.url)
     }
     
+    func deleteFood(index: Int) {
+        self.http?.delegate = self
+        let food = self.foods[index]
+        let url = "\(self.url)/\(food.id!)"
+        self.showLoadingScreen()
+        self.http?.delete(atUrl: url)
+    }
+    
     
 
     override func viewDidLoad() {
@@ -38,12 +46,28 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "food-cell")
         
+        self.navigationItem.rightBarButtonItem =
+            UIBarButtonItem(barButtonSystemItem: .add,
+                            target: self,
+                            action: #selector(FoodTableViewController.showAddModal))
+        
         self.loadFoods()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func showAddModal() {
+        
+    }
+    
+    func showDeteails(of food: Food) {
+        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "food-details") as! FoodDetailsViewController
+        nextVC.foodId = food.id
+        
+        self.navigationController?.show(nextVC, sender:self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +87,9 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
     }
     
     func didDeleteData() {
+        DispatchQueue.main.async {
         self.loadFoods()
+        }
     }
     
     // MARK: - Table view data source
@@ -101,10 +127,14 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.deleteFood(index: indexPath.row)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.showDeteails(of: self.foods[indexPath.row])
     }
     
 
