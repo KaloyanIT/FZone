@@ -15,10 +15,13 @@ import FacebookCore
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var http: HttpRequester?
+    var baseUrl: String = "http://192.168.0.103:3001/api"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.http = HttpRequester()
         
         if AccessToken.current != nil {
             // Load login screen
