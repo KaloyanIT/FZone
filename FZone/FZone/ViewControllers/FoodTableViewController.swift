@@ -77,6 +77,7 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
     
     func didReceiveData(data: Any) {
         let dataArray = data as! [Dictionary<String, Any>]
+        print(dataArray)
         
         self.foods = dataArray.map(){Food(withDict: $0)}
         

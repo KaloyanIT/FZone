@@ -11,7 +11,11 @@ extension Food {
         let id = dict["id"] as! String
         let name = dict["name"] as! String
         let foodDescription = dict["description"] as! String
-        self.init(withId: id, name:name, andDescription: foodDescription)
+        let calories = dict["calories"] as! String
+        let fat = dict["fat"] as! String
+        let carbs = dict["carbonates"] as! String
+        let proteins = dict["proteins"] as! String
+        self.init(withId: id, name:name, andDescription: foodDescription, withCalories: calories, withFats: fat, withCarbs: carbs, withProteins: proteins)
     }
     
     static func fromDict(_ dict: Dictionary<String, Any>) -> Food {
@@ -21,7 +25,11 @@ extension Food {
     func toDict() -> Dictionary<String, Any> {
         return [
             "name": self.name!,
-            "description": self.foodDescription!
+            "description": self.foodDescription!,
+            "calories": self.calories!,
+            "fat": self.fat!,
+            "carbonates": self.carbs!,
+            "proteins": self.proteins!
         ]
     }
 }

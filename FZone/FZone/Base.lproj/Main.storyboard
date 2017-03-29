@@ -78,6 +78,25 @@
             </objects>
             <point key="canvasLocation" x="1382.608695652174" y="517.66304347826087"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="e9a-wv-hhY">
+            <objects>
+                <viewController storyboardIdentifier="profile" id="94q-DT-uCF" customClass="ProfileViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="plb-Jr-Nv2"/>
+                        <viewControllerLayoutGuide type="bottom" id="LMJ-es-uQe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zDS-0w-5HA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="cg2-I9-wTo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8G-ks-wei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="-913"/>
+        </scene>
         <!--Home-->
         <scene sceneID="nDN-Oe-JNk">
             <objects>
@@ -86,13 +105,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0X-9z-d9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="-237"/>
+            <point key="canvasLocation" x="-258" y="-179"/>
         </scene>
-        <!--Item-->
+        <!--Foods-->
         <scene sceneID="EtJ-mn-EL4">
             <objects>
                 <navigationController id="ffE-BU-60Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="OTn-jA-KJe"/>
+                    <tabBarItem key="tabBarItem" title="Foods" id="OTn-jA-KJe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kru-51-QQF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,6 +137,7 @@
                     <connections>
                         <segue destination="AHR-RI-ahC" kind="relationship" relationship="viewControllers" id="m9u-kB-hc3"/>
                         <segue destination="ffE-BU-60Y" kind="relationship" relationship="viewControllers" id="YxC-ag-dwC"/>
+                        <segue destination="94q-DT-uCF" kind="relationship" relationship="viewControllers" id="AZ9-zk-9Mu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMa-cA-4TU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzV-MC-bjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1215.2" y="-573.46326836581716"/>
+            <point key="canvasLocation" x="-4138" y="206"/>
         </scene>
     </scenes>
 </document>
