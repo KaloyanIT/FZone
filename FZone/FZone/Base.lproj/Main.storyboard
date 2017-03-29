@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Foods-->
         <scene sceneID="Rrt-Q2-ptv">
             <objects>
                 <tableViewController id="16k-8d-fGZ" customClass="FoodTableViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cGM-Jk-Pfo" id="Yur-C8-si4">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -33,7 +33,9 @@
                             <outlet property="delegate" destination="16k-8d-fGZ" id="0k6-KD-JM5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ZTc-gV-LNc"/>
+                    <tabBarItem key="tabBarItem" title="Foods" image="cutlery" selectedImage="cutlery" id="ZTc-gV-LNc">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="5h8-3s-xbn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01j-Cg-8ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="cg2-I9-wTo"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="avatar" id="cg2-I9-wTo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8G-ks-wei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +103,7 @@
         <scene sceneID="nDN-Oe-JNk">
             <objects>
                 <viewController title="Home" id="AHR-RI-ahC" customClass="StartViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="8Jx-NI-guL"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-3" selectedImage="home-3" id="8Jx-NI-guL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0X-9z-d9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +113,9 @@
         <scene sceneID="EtJ-mn-EL4">
             <objects>
                 <navigationController id="ffE-BU-60Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Foods" id="OTn-jA-KJe"/>
+                    <tabBarItem key="tabBarItem" title="Foods" selectedImage="cutlery" id="OTn-jA-KJe">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kru-51-QQF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,6 +138,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="ima_home" value="home-2"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="AHR-RI-ahC" kind="relationship" relationship="viewControllers" id="m9u-kB-hc3"/>
                         <segue destination="ffE-BU-60Y" kind="relationship" relationship="viewControllers" id="YxC-ag-dwC"/>
@@ -190,4 +197,10 @@
             <point key="canvasLocation" x="-4138" y="206"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="32" height="32"/>
+        <image name="cutlery" width="32" height="32"/>
+        <image name="home-2" width="24" height="24"/>
+        <image name="home-3" width="32" height="32"/>
+    </resources>
 </document>

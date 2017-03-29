@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
-    }
+    }    
     
     func loadLoginScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
