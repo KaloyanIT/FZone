@@ -10,6 +10,7 @@ pod 'Presentr'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'SnapKit', '~> 3.2.0'
   target 'FZoneTests' do
     inherit! :search_paths
     # Pods for testing

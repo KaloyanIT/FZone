@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Presentr
 
-class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
+class FoodTableViewController: UITableViewController, HttpRequesterDelegate, AddFoodModalDelegate {
     var foods: [Food] = []
+    
+    let presenter: Presentr = {
+        let presenter = Presentr(presentationType: .popup)
+        presenter.transitionType = .coverHorizontalFromRight // Optional
+        return presenter
+    }()
+    
+    
     var http: HttpRequester? {
         get{
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -60,8 +69,22 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate {
     }
     
     func showAddModal() {
+        let nextVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "modal-add-food") as! AddFoodModalViewController
         
+        nextVC.delegate = self
+        
+        
+        self.customPresentViewController(self.presenter, viewController: nextVC, animated: true, completion: nil)
     }
+    
+    func didCreateFood(food: Food?) {
+        self.foods.append(food!)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     
     func showDeteails(of food: Food) {
         let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "food-details") as! FoodDetailsViewController
