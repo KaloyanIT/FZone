@@ -15,6 +15,8 @@
 		E31233D51E8DA7CB00322AF1 /* AddFoodModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */; };
 		E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */; };
 		E32A3D9E1E9180120095B2BE /* FoodSQLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */; };
+		E32A3DA11E91859C0095B2BE /* FoodSQLDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3DA01E91859C0095B2BE /* FoodSQLDataDelegate.swift */; };
+		E32A3DA31E9187A20095B2BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3DA21E9187A20095B2BE /* Constants.swift */; };
 		E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797B1E86B8000004D499 /* LoadingExtensions.swift */; };
 		E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797D1E86C7DA0004D499 /* MainViewController.swift */; };
 		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
@@ -60,6 +62,8 @@
 		E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFoodModalViewController.swift; path = ViewControllers/Modals/AddFoodModalViewController.swift; sourceTree = "<group>"; };
 		E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodHttpData.swift; path = Data/FoodHttpData.swift; sourceTree = "<group>"; };
 		E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSQLData.swift; sourceTree = "<group>"; };
+		E32A3DA01E91859C0095B2BE /* FoodSQLDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodSQLDataDelegate.swift; path = Data/Delegates/FoodSQLDataDelegate.swift; sourceTree = "<group>"; };
+		E32A3DA21E9187A20095B2BE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utils/Constants.swift; sourceTree = "<group>"; };
 		E34C797B1E86B8000004D499 /* LoadingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingExtensions.swift; path = ViewControllers/Extensions/LoadingExtensions.swift; sourceTree = "<group>"; };
 		E34C797D1E86C7DA0004D499 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		E34C797E1E86C7DA0004D499 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/StartViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			name = Modals;
 			sourceTree = "<group>";
 		};
+		E32A3D9F1E9185760095B2BE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E32A3DA01E91859C0095B2BE /* FoodSQLDataDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		E34C79781E86B74E0004D499 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 		E34F0D0E1E9101E3006CB56F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E32A3D9F1E9185760095B2BE /* Delegates */,
 				E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */,
 				E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */,
 			);
@@ -275,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E3E699061E91234100347C8A /* DefaultsKeys.swift */,
+				E32A3DA21E9187A20095B2BE /* Constants.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -487,6 +501,7 @@
 				E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */,
 				E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */,
 				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
+				E32A3DA11E91859C0095B2BE /* FoodSQLDataDelegate.swift in Sources */,
 				E32A3D9E1E9180120095B2BE /* FoodSQLData.swift in Sources */,
 				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
 				E3E699071E91234100347C8A /* DefaultsKeys.swift in Sources */,
@@ -505,6 +520,7 @@
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
 				E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */,
+				E32A3DA31E9187A20095B2BE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

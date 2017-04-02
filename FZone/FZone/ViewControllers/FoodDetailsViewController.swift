@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Toaster
 
-class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
+class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQLDataDelegate {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelCarbs: UILabel!
@@ -16,7 +17,7 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
     @IBOutlet weak var labelProteins: UILabel!
     
     
-    
+    var data: FoodSQLData?
     
     
     var foodId: String?
@@ -38,13 +39,24 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadFoodDetails()
+        data = FoodSQLData(withPath: Constants.dbPath)
         
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .save,
                             target: self,
-                            action: #selector(FoodTableViewController.showAddModal))
+                            action: #selector(FoodDetailsViewController.saveInDb))
         
         // Do any additional setup after loading the view.
+    }
+    
+    func saveInDb() {
+        do {
+            try data?.create(food: self.food!)
+        } catch let error as NSError {
+            let toast = Toast(text: "Error; \(error)")
+            print(error)
+            toast.show()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +89,15 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
         }
     }
     
+    func didGetAll(foods: [Food]) {
+        let toast = Toast(text: "Foods received")
+        toast.show()
+    }
+    
+    func didCreate(result: Any) {
+        print("food received")
+        print(food)
+    }
 
  
 

@@ -14,5 +14,5 @@ struct defaultsKeys {
     static let age = "age"
     static let weight = "weight"
     static let height = "height"
-    static let calories = "calories"
+    static let calories = "calories"    
 }
