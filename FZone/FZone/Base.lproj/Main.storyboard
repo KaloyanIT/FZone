@@ -83,7 +83,7 @@
         <!--Add Food Modal View Controller-->
         <scene sceneID="AxH-ur-phL">
             <objects>
-                <viewController storyboardIdentifier="modal-add-food" id="bcB-eG-BJf" customClass="AddFoodModalViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="modal-food-add" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bcB-eG-BJf" customClass="AddFoodModalViewController" customModule="FZone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRk-eu-2rJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wdC-3P-Z8Q"/>
@@ -107,21 +107,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-lI-4kj">
-                                <rect key="frame" x="258" y="397" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save" destination="bcB-eG-BJf" eventType="touchUpInside" id="TOW-zu-fKC"/>
-                                    <action selector="save:" destination="bcB-eG-BJf" eventType="touchUpInside" id="JOg-Nt-KAm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-Wu-Ffy">
                                 <rect key="frame" x="122" y="397" width="101" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancel" destination="bcB-eG-BJf" eventType="touchUpInside" id="2ho-N5-5Mo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zg-Nw-OW5">
+                                <rect key="frame" x="247" y="392" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="bcB-eG-BJf" eventType="touchUpInside" id="Nrd-PU-hW5"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -13,7 +13,7 @@ extension Food {
         let foodDescription = dict["description"] as! String
         let calories = dict["calories"] as! String
         let fat = dict["fat"] as! String
-        let carbs = dict["carbonates"] as! String
+        let carbs = dict["carbs"] as! String
         let proteins = dict["proteins"] as! String
         self.init(withId: id, name:name, andDescription: foodDescription, withCalories: calories, withFats: fat, withCarbs: carbs, withProteins: proteins)
     }
@@ -28,7 +28,7 @@ extension Food {
             "description": self.foodDescription!,
             "calories": self.calories!,
             "fat": self.fat!,
-            "carbonates": self.carbs!,
+            "carbs": self.carbs!,
             "proteins": self.proteins!
         ]
     }

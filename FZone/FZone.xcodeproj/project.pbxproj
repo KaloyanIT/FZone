@@ -16,6 +16,8 @@
 		E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797B1E86B8000004D499 /* LoadingExtensions.swift */; };
 		E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797D1E86C7DA0004D499 /* MainViewController.swift */; };
 		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
+		E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F0D0A1E90F3CF006CB56F /* FoodTableViewCell.swift */; };
+		E34F0D0D1E90F3CF006CB56F /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E34F0D0B1E90F3CF006CB56F /* FoodTableViewCell.xib */; };
 		E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351774E1E898C5A00474558 /* FoodTableViewController.swift */; };
 		E35177521E898D8500474558 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177511E898D8500474558 /* Food.swift */; };
 		E35177551E89927C00474558 /* FoodDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177541E89927C00474558 /* FoodDict.swift */; };
@@ -56,6 +58,8 @@
 		E34C79841E86EF3E0004D499 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		E34C79861E86FB2F0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		E34C79881E86FC7D0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E34F0D0A1E90F3CF006CB56F /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTableViewCell.swift; path = Views/FoodCell/FoodTableViewCell.swift; sourceTree = "<group>"; };
+		E34F0D0B1E90F3CF006CB56F /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodTableViewCell.xib; path = Views/FoodCell/FoodTableViewCell.xib; sourceTree = "<group>"; };
 		E351774E1E898C5A00474558 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTableViewController.swift; path = ViewControllers/FoodTableViewController.swift; sourceTree = "<group>"; };
 		E35177511E898D8500474558 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Models/Food.swift; sourceTree = "<group>"; };
 		E35177541E89927C00474558 /* FoodDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDict.swift; path = Models/DictExtensions/FoodDict.swift; sourceTree = "<group>"; };
@@ -143,6 +147,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E34F0D081E90F37A006CB56F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E34F0D091E90F3B6006CB56F /* FoodCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E34F0D091E90F3B6006CB56F /* FoodCell */ = {
+			isa = PBXGroup;
+			children = (
+				E34F0D0A1E90F3CF006CB56F /* FoodTableViewCell.swift */,
+				E34F0D0B1E90F3CF006CB56F /* FoodTableViewCell.xib */,
+			);
+			name = FoodCell;
+			sourceTree = "<group>";
+		};
 		E35177501E898D6900474558 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +219,7 @@
 		E3DC5A441E7F12EF00BB018E /* FZone */ = {
 			isa = PBXGroup;
 			children = (
+				E34F0D081E90F37A006CB56F /* Views */,
 				E35177501E898D6900474558 /* Models */,
 				E3067AA31E884B2200784670 /* HttpRequester */,
 				E361D6841E842C8200F6FAF4 /* ViewControllers */,
@@ -311,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3DC5A531E7F12EF00BB018E /* LaunchScreen.storyboard in Resources */,
+				E34F0D0D1E90F3CF006CB56F /* FoodTableViewCell.xib in Resources */,
 				E3DC5A501E7F12EF00BB018E /* Assets.xcassets in Resources */,
 				E3DC5A4B1E7F12EF00BB018E /* Main.storyboard in Resources */,
 			);
@@ -425,6 +448,7 @@
 			files = (
 				E3067AA21E8843A100784670 /* LoginViewController.swift in Sources */,
 				E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */,
+				E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */,
 				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
 				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
 				E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */,

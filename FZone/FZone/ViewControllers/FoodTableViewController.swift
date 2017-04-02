@@ -70,7 +70,7 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
     
     func showAddModal() {
         let nextVC = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "modal-add-food") as! AddFoodModalViewController
+            .instantiateViewController(withIdentifier: "modal-food-add") as! AddFoodModalViewController
         
         nextVC.delegate = self
         
@@ -111,9 +111,8 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
     }
     
     func didDeleteData() {
-        DispatchQueue.main.async {
-        self.loadFoods()
-        }
+                self.loadFoods()
+        
     }
     
     // MARK: - Table view data source

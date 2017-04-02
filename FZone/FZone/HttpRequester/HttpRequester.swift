@@ -36,6 +36,7 @@ class HttpRequester {
                 let body = try JSONSerialization.data(withJSONObject: bodyDict!, options: .prettyPrinted)
                 request.httpBody = body
             } catch {
+                print("http error")
             }
         }
         
