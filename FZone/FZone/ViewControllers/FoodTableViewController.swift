@@ -174,7 +174,7 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
         let big = fat! > carbs! ? (fat! > proteins! ? fat : proteins) : (carbs! > proteins! ? carbs : proteins)
         
         if (big == fat) {
-            return UIColor.red            
+            return UIColor.red
         }
         
         if(big == carbs) {
