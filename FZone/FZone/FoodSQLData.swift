@@ -42,7 +42,7 @@ class FoodSQLData {
                 table.column(FoodSQL.getCaloriesExpression())
                 })!)
         } catch let error as NSError {
-            let toast = Toast(text: "Error: INITDB \(error)")
+            let toast = Toast(text: "Error: INITDB \(error.userInfo)")
             print(error)
             toast.show()
         }
@@ -76,7 +76,6 @@ class FoodSQLData {
                         FoodSQL.getCaloriesExpression() <- food.calories!)
             let result = try db?.run(insert!)
             delegate?.didCreate(result: result)
-            
             print(result!)
         }
     }

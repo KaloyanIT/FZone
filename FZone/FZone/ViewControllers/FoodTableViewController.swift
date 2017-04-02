@@ -178,7 +178,7 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
         }
         
         if(big == carbs) {
-            return UIColor.blue
+            return UIColor.cyan
             
         }
         

@@ -97,9 +97,12 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
             let currFood = self.food
             self.labelName.text = currFood?.name
             self.labelDescription.text = currFood?.foodDescription
-            self.labelFats.text = currFood?.fat
-            self.labelCarbs.text = currFood?.carbs
-            self.labelProteins.text = currFood?.proteins
+            self.labelFats.text = (currFood?.fat)!  + "g"
+            self.labelFats.backgroundColor = UIColor.red
+            self.labelCarbs.text = (currFood?.carbs)!  + "g"
+            self.labelCarbs.backgroundColor = UIColor.cyan
+            self.labelProteins.text = (currFood?.proteins)! + "g"
+            self.labelProteins.backgroundColor = UIColor.green
             self.hideLoadingScreen()
         }
     }
@@ -110,10 +113,28 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
     }
     
     func didCreate(result: Any) {
-        print("food received")
-        print(result)
+        let toast = Toast(text: "You successfully added to favorites")
+        toast.show()
     }
 
- 
+    @IBAction func addToBreakfast(_ sender: UIButton) {
+        let toast = Toast(text: "Successfully added to breakfast")
+        toast.show()
+        //TODO: Add logic
+    }
+    
+    
+    @IBAction func addToLunch(_ sender: UIButton) {
+        let toast = Toast(text: "Successfully added to lunch")
+        toast.show()
+
+    }
+    
+    @IBAction func addToDinner(_ sender: UIButton) {
+        let toast = Toast(text: "Successfully added to dinner")
+        toast.show()
+
+    }
+    
 
 }
