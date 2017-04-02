@@ -124,17 +124,9 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
     }
     
     
-    @IBAction func addToLunch(_ sender: UIButton) {
-        let toast = Toast(text: "Successfully added to lunch")
-        toast.show()
-
-    }
+   
     
-    @IBAction func addToDinner(_ sender: UIButton) {
-        let toast = Toast(text: "Successfully added to dinner")
-        toast.show()
-
-    }
+    
     
 
 }

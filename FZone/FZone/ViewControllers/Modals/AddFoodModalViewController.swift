@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 protocol AddFoodModalDelegate {
     func didCreateFood(food: Food?)
@@ -47,7 +48,18 @@ class AddFoodModalViewController: UIViewController, HttpRequesterDelegate {
 
     @IBAction func saveButton(_ sender: Any) {
         let name = self.textName.text
+        if((name?.characters.count)! <= 3 || name == "") {
+            let toast = Toast(text: "Name must be at least 3 symbols")
+            toast.show()
+            return;
+        }
         let description = self.textDescription.text
+        if((description?.characters.count)! <= 15 || description == "") {
+            let toast = Toast(text: "Description must be at least 15 symbols")
+            toast.show()
+            return;
+        }
+
         let fat = textFieldFat.text
         let carbs = textFieldCarbs.text
         let proteins = textFieldProteins.text

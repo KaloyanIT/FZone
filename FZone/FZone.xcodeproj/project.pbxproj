@@ -29,6 +29,8 @@
 		E35177551E89927C00474558 /* FoodDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177541E89927C00474558 /* FoodDict.swift */; };
 		E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */; };
 		E38029EF1E89C13300B5EB36 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38029EE1E89C13300B5EB36 /* ProfileViewController.swift */; };
+		E3CF2A2C1E91B98200C12BE4 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2A2B1E91B98200C12BE4 /* FavoritesTableViewController.swift */; };
+		E3CF2A2E1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2A2D1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift */; };
 		E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */; };
 		E3DC5A4B1E7F12EF00BB018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A491E7F12EF00BB018E /* Main.storyboard */; };
 		E3DC5A4E1E7F12EF00BB018E /* FZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A4C1E7F12EF00BB018E /* FZone.xcdatamodeld */; };
@@ -81,6 +83,8 @@
 		E35177541E89927C00474558 /* FoodDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDict.swift; path = Models/DictExtensions/FoodDict.swift; sourceTree = "<group>"; };
 		E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDetailsViewController.swift; path = ViewControllers/FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		E38029EE1E89C13300B5EB36 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewControllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		E3CF2A2B1E91B98200C12BE4 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewController.swift; path = ViewControllers/FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		E3CF2A2D1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteDetailsViewController.swift; path = ViewControllers/FavoriteDetailsViewController.swift; sourceTree = "<group>"; };
 		E3DC5A421E7F12EF00BB018E /* FZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A451E7F12EF00BB018E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3DC5A4A1E7F12EF00BB018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */,
 				E38029EE1E89C13300B5EB36 /* ProfileViewController.swift */,
 				E34F0D0F1E91026C006CB56F /* ProfileDetailsFormsViewController.swift */,
+				E3CF2A2B1E91B98200C12BE4 /* FavoritesTableViewController.swift */,
+				E3CF2A2D1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -509,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3067AA21E8843A100784670 /* LoginViewController.swift in Sources */,
+				E3CF2A2C1E91B98200C12BE4 /* FavoritesTableViewController.swift in Sources */,
 				E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */,
 				E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */,
 				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
@@ -529,6 +536,7 @@
 				E38029EF1E89C13300B5EB36 /* ProfileViewController.swift in Sources */,
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
 				E3E6990F1E916BD900347C8A /* UpdateSearchResultsExtension.swift in Sources */,
+				E3CF2A2E1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift in Sources */,
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
 				E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */,
