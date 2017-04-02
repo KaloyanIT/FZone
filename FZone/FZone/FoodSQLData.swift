@@ -23,7 +23,9 @@ class FoodSQLData {
             self.initDb()
         }
         catch let error as NSError {
-            let toast = Toast(text: "Error: \(error.userInfo)")
+            let toast = Toast(text: "Error Init: \(error)")
+            print("Error init")
+            print(error)
             toast.show()
         }
     }
@@ -40,7 +42,8 @@ class FoodSQLData {
                 table.column(FoodSQL.getCaloriesExpression())
                 })!)
         } catch let error as NSError {
-            let toast = Toast(text: "Error: \(error.userInfo)")
+            let toast = Toast(text: "Error: INITDB \(error)")
+            print(error)
             toast.show()
         }
     }
@@ -51,7 +54,9 @@ class FoodSQLData {
             let foodModels = dbFood?.map() {FoodSQL(withRow: $0)}
             self.delegate?.didGetAll(foods: foodModels!)
         } catch let error as NSError {
-            let toast = Toast(text: "Error: \(error.userInfo)")
+            let toast = Toast(text: "Error: GETALL \(error.userInfo)")
+            print(error)
+            
             toast.show()
         }
     }
@@ -62,7 +67,8 @@ class FoodSQLData {
     
     func createMany(foods: [FoodSQL]) throws {
                 try foods.forEach() { food in
-            let insert = self.foodTable?.insert(FoodSQL.getNameExpression() <- food.name!,
+            let insert = self.foodTable?.insert(
+                FoodSQL.getNameExpression() <- food.name!,
                         FoodSQL.getDescriptionExpression() <- food.foodDescription!,
                         FoodSQL.getFatExpression() <- food.fat!,
                         FoodSQL.getCarbsExpression() <- food.carbs!,
@@ -70,7 +76,7 @@ class FoodSQLData {
                         FoodSQL.getCaloriesExpression() <- food.calories!)
             let result = try db?.run(insert!)
             delegate?.didCreate(result: result)
-            print("Create - result")
+            
             print(result!)
         }
     }

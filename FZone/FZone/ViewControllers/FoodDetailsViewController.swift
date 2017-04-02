@@ -40,7 +40,7 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
         super.viewDidLoad()
         self.loadFoodDetails()
         data = FoodSQLData(withPath: Constants.dbPath)
-        
+        data?.delegate = self
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .save,
                             target: self,
@@ -58,10 +58,13 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
             let carbs = self.food?.carbs!
             let proteins = self.food?.proteins!
             let calories = self.food?.calories!
+        
+        
             
             sqlFood =  FoodSQL(withName: name!, andDescription: foodDescription!, withCalories: calories!, withFats: fat!, withCarbs: carbs!, withProteins: proteins!)
             
             do {
+                //try data?.getAll()
                 try data?.create(food: sqlFood!)
             } catch let error as NSError {
                 let toast = Toast(text: "Error; \(error.userInfo)")
@@ -108,7 +111,7 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
     
     func didCreate(result: Any) {
         print("food received")
-        print(food)
+        print(result)
     }
 
  

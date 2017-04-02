@@ -13,7 +13,7 @@ struct Constants {
         let documentsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                                .userDomainMask, true)[0]
         print(documentsDir)
-        return "\(documentsDir)/foods.db"
+        return "\(documentsDir)/foods.sqlite3"
     }()
     
 }
