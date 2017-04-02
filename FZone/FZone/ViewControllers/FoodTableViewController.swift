@@ -10,7 +10,10 @@ import UIKit
 import Presentr
 
 class FoodTableViewController: UITableViewController, HttpRequesterDelegate, AddFoodModalDelegate {
+   
     var foods: [Food] = []
+    var filteredFoods: [Food] = []
+    let searchController = UISearchController(searchResultsController: nil)
     
     let presenter: Presentr = {
         let presenter = Presentr(presentationType: .popup)
@@ -21,15 +24,13 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
     
     var http: HttpRequester? {
         get{
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return appDelegate.http;
+            return getAppDelegate().http;
         }
     }
     
     var url: String {
         get{
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return "\(appDelegate.baseUrl)/foods"
+            return "\(getAppDelegate().baseUrl)/foods"
         }
     }
     
@@ -52,10 +53,14 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         let cellNib = UINib(nibName: "FoodTableViewCell", bundle: nil)
         self.tableView.register(cellNib, forCellReuseIdentifier: "custom-food-cell")
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
         
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
@@ -68,6 +73,15 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredFoods = foods.filter { food in
+            //return food.name?.lowercaseString.containsString(searchText.lowercaseString)
+            return (food.name?.lowercased().contains(searchText.lowercased()))!
+        }
+        
+        tableView.reloadData()
     }
     
     func showAddModal() {
@@ -126,13 +140,24 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredFoods.count
+        }
+        
         return self.foods.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "custom-food-cell", for: indexPath) as! FoodTableViewCell
-        let currFood = self.foods[indexPath.row]
+        let currFood: Food
+        
+        if searchController.isActive && searchController.searchBar.text != "" {
+            currFood = filteredFoods[indexPath.row]
+        } else {
+            currFood = self.foods[indexPath.row]
+        }
+        
         
         cell.labelFoodName?.text = currFood.name
         cell.labelFoodCalories?.text = currFood.calories

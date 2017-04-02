@@ -33,6 +33,7 @@
 		E3E699071E91234100347C8A /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E699061E91234100347C8A /* DefaultsKeys.swift */; };
 		E3E699091E914B7100347C8A /* DelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E699081E914B7100347C8A /* DelegateExtension.swift */; };
 		E3E6990D1E914C5B00347C8A /* FoodMappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E6990C1E914C5B00347C8A /* FoodMappings.swift */; };
+		E3E6990F1E916BD900347C8A /* UpdateSearchResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E6990E1E916BD900347C8A /* UpdateSearchResultsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		E3E699061E91234100347C8A /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		E3E699081E914B7100347C8A /* DelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegateExtension.swift; path = ViewControllers/Extensions/DelegateExtension.swift; sourceTree = "<group>"; };
 		E3E6990C1E914C5B00347C8A /* FoodMappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodMappings.swift; path = Models/FoodMappings.swift; sourceTree = "<group>"; };
+		E3E6990E1E916BD900347C8A /* UpdateSearchResultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateSearchResultsExtension.swift; path = ViewControllers/Extensions/UpdateSearchResultsExtension.swift; sourceTree = "<group>"; };
 		F61EE40F389BF7EB38747E9C /* Pods-FZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			children = (
 				E34C797B1E86B8000004D499 /* LoadingExtensions.swift */,
 				E3E699081E914B7100347C8A /* DelegateExtension.swift */,
+				E3E6990E1E916BD900347C8A /* UpdateSearchResultsExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */,
 				E38029EF1E89C13300B5EB36 /* ProfileViewController.swift in Sources */,
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
+				E3E6990F1E916BD900347C8A /* UpdateSearchResultsExtension.swift in Sources */,
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
 			);

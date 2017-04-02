@@ -11,6 +11,10 @@ import UIKit
 class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelCarbs: UILabel!
+    @IBOutlet weak var labelFats: UILabel!
+    @IBOutlet weak var labelProteins: UILabel!
+    
     
     
     
@@ -20,21 +24,26 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
     
     var url: String {
         get {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return "\(appDelegate.baseUrl)/foods"
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return "\(getAppDelegate().baseUrl)/foods"
         }
     }
     
     var http: HttpRequester? {
         get {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return appDelegate.http
+            return getAppDelegate().http
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadFoodDetails()
+        
+        self.navigationItem.rightBarButtonItem =
+            UIBarButtonItem(barButtonSystemItem: .save,
+                            target: self,
+                            action: #selector(FoodTableViewController.showAddModal))
+        
         // Do any additional setup after loading the view.
     }
 
@@ -58,8 +67,12 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate {
     
     func updateUI() {
         DispatchQueue.main.async {
-            self.labelName.text = self.food?.name
-            self.labelDescription.text = self.food?.foodDescription
+            let currFood = self.food
+            self.labelName.text = currFood?.name
+            self.labelDescription.text = currFood?.foodDescription
+            self.labelFats.text = currFood?.fat
+            self.labelCarbs.text = currFood?.carbs
+            self.labelProteins.text = currFood?.proteins
             self.hideLoadingScreen()
         }
     }
