@@ -13,6 +13,8 @@
 		E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA41E884B6200784670 /* HttpRequester.swift */; };
 		E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */; };
 		E31233D51E8DA7CB00322AF1 /* AddFoodModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */; };
+		E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */; };
+		E32A3D9E1E9180120095B2BE /* FoodSQLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */; };
 		E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797B1E86B8000004D499 /* LoadingExtensions.swift */; };
 		E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797D1E86C7DA0004D499 /* MainViewController.swift */; };
 		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
@@ -56,6 +58,8 @@
 		E3067AA41E884B6200784670 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = HttpRequester/HttpRequester.swift; sourceTree = "<group>"; };
 		E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequester/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFoodModalViewController.swift; path = ViewControllers/Modals/AddFoodModalViewController.swift; sourceTree = "<group>"; };
+		E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodHttpData.swift; path = Data/FoodHttpData.swift; sourceTree = "<group>"; };
+		E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSQLData.swift; sourceTree = "<group>"; };
 		E34C797B1E86B8000004D499 /* LoadingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingExtensions.swift; path = ViewControllers/Extensions/LoadingExtensions.swift; sourceTree = "<group>"; };
 		E34C797D1E86C7DA0004D499 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		E34C797E1E86C7DA0004D499 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/StartViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 		E34F0D0E1E9101E3006CB56F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */,
+				E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */,
 				E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */,
 				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
+				E32A3D9E1E9180120095B2BE /* FoodSQLData.swift in Sources */,
 				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
 				E3E699071E91234100347C8A /* DefaultsKeys.swift in Sources */,
 				E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */,
@@ -497,6 +504,7 @@
 				E3E6990F1E916BD900347C8A /* UpdateSearchResultsExtension.swift in Sources */,
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
+				E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
