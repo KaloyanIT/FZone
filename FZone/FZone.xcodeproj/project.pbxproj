@@ -30,6 +30,7 @@
 		E3DC5A501E7F12EF00BB018E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A4F1E7F12EF00BB018E /* Assets.xcassets */; };
 		E3DC5A531E7F12EF00BB018E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3DC5A511E7F12EF00BB018E /* LaunchScreen.storyboard */; };
 		E3DC5A5E1E7F12EF00BB018E /* FZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC5A5D1E7F12EF00BB018E /* FZoneTests.swift */; };
+		E3E699071E91234100347C8A /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E699061E91234100347C8A /* DefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E3DC5A591E7F12EF00BB018E /* FZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DC5A5D1E7F12EF00BB018E /* FZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZoneTests.swift; sourceTree = "<group>"; };
 		E3DC5A5F1E7F12EF00BB018E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E699061E91234100347C8A /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		F61EE40F389BF7EB38747E9C /* Pods-FZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FZoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FZoneTests/Pods-FZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 		E3DC5A441E7F12EF00BB018E /* FZone */ = {
 			isa = PBXGroup;
 			children = (
+				E3E699051E91230C00347C8A /* Utils */,
 				E34F0D0E1E9101E3006CB56F /* Data */,
 				E34F0D081E90F37A006CB56F /* Views */,
 				E35177501E898D6900474558 /* Models */,
@@ -251,6 +254,14 @@
 				E3DC5A5F1E7F12EF00BB018E /* Info.plist */,
 			);
 			path = FZoneTests;
+			sourceTree = "<group>";
+		};
+		E3E699051E91230C00347C8A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3E699061E91234100347C8A /* DefaultsKeys.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +473,7 @@
 				E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */,
 				E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */,
 				E34C797F1E86C7DA0004D499 /* MainViewController.swift in Sources */,
+				E3E699071E91234100347C8A /* DefaultsKeys.swift in Sources */,
 				E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */,
 				E35177521E898D8500474558 /* Food.swift in Sources */,
 				E3DC5A461E7F12EF00BB018E /* AppDelegate.swift in Sources */,

@@ -9,11 +9,6 @@
 import UIKit
 import Toaster
 
-struct defaultsKeys {
-    static let firstName = "firstName"
-    static let lastName = "lastName"
-}
-
 class ProfileDetailsFormsViewController: UIViewController {
     @IBOutlet weak var textFieldFirstName: UITextField!
     @IBOutlet weak var textFieldLastName: UITextField!
@@ -41,9 +36,18 @@ class ProfileDetailsFormsViewController: UIViewController {
     func setProfileDetails() {
         let firstName = textFieldFirstName.text
         let lastName = textFieldLastName.text
+        let age = labelAgeSB.text
+        let weight = labelWeightSB.text
+        let height = labelHeightSB.text
+        let calories = labelCaloriesSB.text
+        
         
         defaults.set(firstName, forKey: defaultsKeys.firstName)
         defaults.set(lastName, forKey: defaultsKeys.lastName)
+        defaults.set(age, forKey: defaultsKeys.age)
+        defaults.set(weight, forKey: defaultsKeys.weight)
+        defaults.set(height, forKey: defaultsKeys.height)
+        defaults.set(calories, forKey: defaultsKeys.calories)
         
         let stringFN = defaults.string(forKey: defaultsKeys.firstName)
         
