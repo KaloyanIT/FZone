@@ -1,19 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FoodTableViewCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="custom-food-cell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FoodTableViewCell" customModule="FZone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ui-ec-cEA" userLabel="FoodCalories">
+                        <rect key="frame" x="254" y="0.0" width="66" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="HbK-34-ddZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5K-yp-l0t" userLabel="FoodName">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7Ui-ec-cEA" secondAttribute="trailing" id="ANM-Bm-ali"/>
+                    <constraint firstItem="q5K-yp-l0t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BL9-H2-uSO"/>
+                    <constraint firstItem="q5K-yp-l0t" firstAttribute="centerY" secondItem="7Ui-ec-cEA" secondAttribute="centerY" id="cja-x6-4nT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7Ui-ec-cEA" secondAttribute="bottom" constant="-10" id="e7J-op-9oH"/>
+                    <constraint firstItem="7Ui-ec-cEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eeL-Mf-P4r"/>
+                    <constraint firstItem="7Ui-ec-cEA" firstAttribute="leading" secondItem="q5K-yp-l0t" secondAttribute="trailing" constant="8" symbolic="YES" id="hu7-Ww-wpw"/>
+                    <constraint firstItem="q5K-yp-l0t" firstAttribute="firstBaseline" secondItem="7Ui-ec-cEA" secondAttribute="firstBaseline" id="uzD-Ms-Zga"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="labelFoodCalories" destination="7Ui-ec-cEA" id="dYC-tw-GVO"/>
+                <outlet property="labelFoodName" destination="q5K-yp-l0t" id="W4L-Lt-zwt"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

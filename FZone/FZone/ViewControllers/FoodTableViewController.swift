@@ -53,7 +53,9 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "food-cell")
+        
+        let cellNib = UINib(nibName: "FoodTableViewCell", bundle: nil)
+        self.tableView.register(cellNib, forCellReuseIdentifier: "custom-food-cell")
         
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
@@ -129,10 +131,12 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "food-cell", for: indexPath)
-
-        cell.textLabel?.text = self.foods[indexPath.row].name
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "custom-food-cell", for: indexPath) as! FoodTableViewCell
+        let currFood = self.foods[indexPath.row]
+        
+        cell.labelFoodName?.text = currFood.name
+        cell.labelFoodCalories?.text = currFood.calories
+        
         return cell
     }
     
