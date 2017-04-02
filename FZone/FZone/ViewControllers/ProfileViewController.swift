@@ -12,7 +12,8 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let defaults = UserDefaults.standard
+        print(defaults)
         // Do any additional setup after loading the view.
     }
 

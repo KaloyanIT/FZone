@@ -8,8 +8,9 @@
 
 import UIKit
 import FacebookLogin
+import Toaster
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,28 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func createProfile(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateProfileScreen")
+        
+        self.present(controller, animated: true, completion: nil)
+    }
     func login() {
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
         loginButton.center = view.center
+        loginButton.delegate = self
+        
         
         view.addSubview(loginButton)
+    }
+    
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        print("login has been completed")
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        print("logout")
     }
     
 

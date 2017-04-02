@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.http = HttpRequester()
         
-        if AccessToken.current != nil {
+        if AccessToken.current == nil {
             // Load login screen
             loadLoginScreen()
             print("User is not logged")

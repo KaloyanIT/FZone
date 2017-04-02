@@ -11,11 +11,9 @@ import FacebookLogin
 
 
 class StartViewController: UIViewController {
-    var http: HttpRequester?
 
     override func viewDidLoad() {
-        super.viewDidLoad();
-        self.http = HttpRequester()
+        super.viewDidLoad();        
         // Do any additional setup after loading the view, typically from a nib.
         // Check git
     }

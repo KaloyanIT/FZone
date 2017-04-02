@@ -18,6 +18,7 @@
 		E34C79801E86C7DA0004D499 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C797E1E86C7DA0004D499 /* StartViewController.swift */; };
 		E34F0D0C1E90F3CF006CB56F /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F0D0A1E90F3CF006CB56F /* FoodTableViewCell.swift */; };
 		E34F0D0D1E90F3CF006CB56F /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E34F0D0B1E90F3CF006CB56F /* FoodTableViewCell.xib */; };
+		E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F0D0F1E91026C006CB56F /* ProfileDetailsFormsViewController.swift */; };
 		E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351774E1E898C5A00474558 /* FoodTableViewController.swift */; };
 		E35177521E898D8500474558 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177511E898D8500474558 /* Food.swift */; };
 		E35177551E89927C00474558 /* FoodDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35177541E89927C00474558 /* FoodDict.swift */; };
@@ -60,6 +61,7 @@
 		E34C79881E86FC7D0004D499 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E34F0D0A1E90F3CF006CB56F /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTableViewCell.swift; path = Views/FoodCell/FoodTableViewCell.swift; sourceTree = "<group>"; };
 		E34F0D0B1E90F3CF006CB56F /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodTableViewCell.xib; path = Views/FoodCell/FoodTableViewCell.xib; sourceTree = "<group>"; };
+		E34F0D0F1E91026C006CB56F /* ProfileDetailsFormsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDetailsFormsViewController.swift; path = ViewControllers/ProfileDetailsFormsViewController.swift; sourceTree = "<group>"; };
 		E351774E1E898C5A00474558 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTableViewController.swift; path = ViewControllers/FoodTableViewController.swift; sourceTree = "<group>"; };
 		E35177511E898D8500474558 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Models/Food.swift; sourceTree = "<group>"; };
 		E35177541E89927C00474558 /* FoodDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodDict.swift; path = Models/DictExtensions/FoodDict.swift; sourceTree = "<group>"; };
@@ -164,6 +166,13 @@
 			name = FoodCell;
 			sourceTree = "<group>";
 		};
+		E34F0D0E1E9101E3006CB56F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		E35177501E898D6900474558 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +201,7 @@
 				E351774E1E898C5A00474558 /* FoodTableViewController.swift */,
 				E38029EC1E89BC5F00B5EB36 /* FoodDetailsViewController.swift */,
 				E38029EE1E89C13300B5EB36 /* ProfileViewController.swift */,
+				E34F0D0F1E91026C006CB56F /* ProfileDetailsFormsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +229,7 @@
 		E3DC5A441E7F12EF00BB018E /* FZone */ = {
 			isa = PBXGroup;
 			children = (
+				E34F0D0E1E9101E3006CB56F /* Data */,
 				E34F0D081E90F37A006CB56F /* Views */,
 				E35177501E898D6900474558 /* Models */,
 				E3067AA31E884B2200784670 /* HttpRequester */,
@@ -461,6 +472,7 @@
 				E38029EF1E89C13300B5EB36 /* ProfileViewController.swift in Sources */,
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
+				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
