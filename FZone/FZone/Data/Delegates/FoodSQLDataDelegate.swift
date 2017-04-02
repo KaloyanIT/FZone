@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FoodSQLDataDelegate {
-    func didGetAll(foods: [Food])
+    func didGetAll(foods: [FoodSQL])
     
     func didCreate(result: Any)
 }

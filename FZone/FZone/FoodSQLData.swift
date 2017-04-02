@@ -31,13 +31,13 @@ class FoodSQLData {
     func initDb() {
         do {
             try self.db?.run((self.foodTable?.create { table in
-                table.column(Food.getIdExpression(), primaryKey: true)
-                table.column(Food.getNameExpression(), unique: true)
-                table.column(Food.getDescriptionExpression())
-                table.column(Food.getFatExpression())
-                table.column(Food.getCarbsExpression())
-                table.column(Food.getProteinsExpression())
-                table.column(Food.getCaloriesExpression())
+                table.column(FoodSQL.getIdExpression(), primaryKey: true)
+                table.column(FoodSQL.getNameExpression(), unique: true)
+                table.column(FoodSQL.getDescriptionExpression())
+                table.column(FoodSQL.getFatExpression())
+                table.column(FoodSQL.getCarbsExpression())
+                table.column(FoodSQL.getProteinsExpression())
+                table.column(FoodSQL.getCaloriesExpression())
                 })!)
         } catch let error as NSError {
             let toast = Toast(text: "Error: \(error.userInfo)")
@@ -48,7 +48,7 @@ class FoodSQLData {
     func getAll() {
         do{
             let dbFood = try db?.prepare(self.foodTable!)
-            let foodModels = dbFood?.map() {Food(withRow: $0)}
+            let foodModels = dbFood?.map() {FoodSQL(withRow: $0)}
             self.delegate?.didGetAll(foods: foodModels!)
         } catch let error as NSError {
             let toast = Toast(text: "Error: \(error.userInfo)")
@@ -56,20 +56,21 @@ class FoodSQLData {
         }
     }
     
-    func create(food:Food) throws {
+    func create(food:FoodSQL) throws {
         try self.createMany(foods: [food])
     }
     
-    func createMany(foods: [Food]) throws {
+    func createMany(foods: [FoodSQL]) throws {
                 try foods.forEach() { food in
-            let insert = self.foodTable?.insert(Food.getNameExpression() <- food.name!,
-                        Food.getDescriptionExpression() <- food.foodDescription!,
-                        Food.getFatExpression() <- food.fat!,
-                        Food.getCarbsExpression() <- food.carbs!,
-                        Food.getProteinsExpression() <- food.proteins!,
-                        Food.getCaloriesExpression() <- food.calories!)
+            let insert = self.foodTable?.insert(FoodSQL.getNameExpression() <- food.name!,
+                        FoodSQL.getDescriptionExpression() <- food.foodDescription!,
+                        FoodSQL.getFatExpression() <- food.fat!,
+                        FoodSQL.getCarbsExpression() <- food.carbs!,
+                        FoodSQL.getProteinsExpression() <- food.proteins!,
+                        FoodSQL.getCaloriesExpression() <- food.calories!)
             let result = try db?.run(insert!)
             delegate?.didCreate(result: result)
+            print("Create - result")
             print(result!)
         }
     }

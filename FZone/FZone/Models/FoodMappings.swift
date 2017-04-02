@@ -10,7 +10,7 @@ import Foundation
 import SQLite
 
 
-let idExpression = Expression<String>("id")
+let idExpression = Expression<Int64>("id")
 let nameExpression = Expression<String>("name")
 let descriptionExpression = Expression<String>("description")
 let fatExpression = Expression<String>("fat")
@@ -18,8 +18,8 @@ let carbsExpression = Expression<String>("carbs")
 let proteinsExpression = Expression<String>("proteins")
 let calsExpression = Expression<String>("calories")
 
-extension Food {
-    public static func getIdExpression() -> Expression<String> {
+extension FoodSQL {
+    public static func getIdExpression() -> Expression<Int64> {
         return idExpression
     }
     
@@ -48,7 +48,7 @@ extension Food {
     }
     
     convenience init(withRow row: Row) {
-        let id: String = row[idExpression]
+        let id: Int64 = row[idExpression]
         let name: String = row[nameExpression]
         let description: String = row[descriptionExpression]
         let fat: String = row[fatExpression]
