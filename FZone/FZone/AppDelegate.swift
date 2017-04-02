@@ -23,10 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.http = HttpRequester()
         
-        if AccessToken.current == nil {
-            // Load login screen
+//        if AccessToken.current == nil {
+//            // Load login screen
+//            loadLoginScreen()
+//            print("User is not logged")
+//        }
+        
+        if UserDefaults.standard.string(forKey: defaultsKeys.firstName) == nil {
             loadLoginScreen()
-            print("User is not logged")
         }
         
         return true

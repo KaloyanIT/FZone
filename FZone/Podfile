@@ -12,6 +12,10 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'SnapKit', '~> 3.2.0'
 pod 'Toaster', '~> 2.0'
+pod 'SQLite.swift'
+pod 'Swinject', '~> 2.0.0'
+pod 'SwinjectStoryboard', '~> 1.0.0'
+
   target 'FZoneTests' do
     inherit! :search_paths
     # Pods for testing

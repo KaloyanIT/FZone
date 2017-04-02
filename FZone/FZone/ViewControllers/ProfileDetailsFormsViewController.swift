@@ -48,11 +48,6 @@ class ProfileDetailsFormsViewController: UIViewController {
         defaults.set(weight, forKey: defaultsKeys.weight)
         defaults.set(height, forKey: defaultsKeys.height)
         defaults.set(calories, forKey: defaultsKeys.calories)
-        
-        let stringFN = defaults.string(forKey: defaultsKeys.firstName)
-        
-        print(stringFN ?? "first name not set")
-        
     }
     
     
