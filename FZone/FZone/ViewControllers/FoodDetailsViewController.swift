@@ -19,7 +19,7 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
     
     var data: FoodSQLData?
     
-    
+    var sqlFood: FoodSQL?
     var foodId: String?
     var food: Food?
     
@@ -50,24 +50,25 @@ class FoodDetailsViewController: UIViewController, HttpRequesterDelegate, FoodSQ
     }
     
     func saveInDb() {
-        let name = self.food?.name!
-        let foodDescription = self.food?.foodDescription!
-        let fat = self.food?.fat!
-        let carbs = self.food?.carbs!
-        let proteins = self.food?.proteins!
-        let calories = self.food?.calories!
-        
-        let currFood =  FoodSQL(withName: name!, andDescription: foodDescription!, withCalories: calories!, withFats: fat!, withCarbs: carbs!, withProteins: proteins!)
-
         
         
-        do {
-            try data?.create(food: currFood)
-        } catch let error as NSError {
-            let toast = Toast(text: "Error; \(error.userInfo)")
-            print(error.userInfo)
-            toast.show()
-        }
+            let name = self.food?.name!
+            let foodDescription = self.food?.foodDescription!
+            let fat = self.food?.fat!
+            let carbs = self.food?.carbs!
+            let proteins = self.food?.proteins!
+            let calories = self.food?.calories!
+            
+            sqlFood =  FoodSQL(withName: name!, andDescription: foodDescription!, withCalories: calories!, withFats: fat!, withCarbs: carbs!, withProteins: proteins!)
+            
+            do {
+                try data?.create(food: sqlFood!)
+            } catch let error as NSError {
+                let toast = Toast(text: "Error; \(error.userInfo)")
+                print(error.userInfo)
+                toast.show()
+            }
+        
     }
 
     override func didReceiveMemoryWarning() {
