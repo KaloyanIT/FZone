@@ -158,11 +158,35 @@ class FoodTableViewController: UITableViewController, HttpRequesterDelegate, Add
             currFood = self.foods[indexPath.row]
         }
         
-        
         cell.labelFoodName?.text = currFood.name
         cell.labelFoodCalories?.text = currFood.calories
+        cell.backgroundColor = setCellColour(food: currFood)
+        
         
         return cell
+    }
+    
+    func setCellColour(food: Food) -> UIColor {
+        let fat = Int(food.fat!)
+        let carbs = Int(food.carbs!)
+        let proteins = Int(food.proteins!)
+        
+        let big = fat! > carbs! ? (fat! > proteins! ? fat : proteins) : (carbs! > proteins! ? carbs : proteins)
+        
+        if (big == fat) {
+            return UIColor.red            
+        }
+        
+        if(big == carbs) {
+            return UIColor.blue
+            
+        }
+        
+        if(big == proteins) {
+            return UIColor.green
+        }
+        
+        return UIColor.white
     }
     
 
