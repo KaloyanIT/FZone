@@ -44,7 +44,7 @@ class FoodSQLData {
         } catch let error as NSError {
             let toast = Toast(text: "Error: INITDB \(error.userInfo)")
             print(error)
-            toast.show()
+            //toast.show()
         }
     }
     

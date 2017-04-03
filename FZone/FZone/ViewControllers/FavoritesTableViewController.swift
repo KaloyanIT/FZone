@@ -90,7 +90,7 @@ class FavoritesTableViewController: UITableViewController, FoodSQLDataDelegate {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.showDeteails(of: self.foods[indexPath.row])
+        self.showDetails(of: (self.foods?[indexPath.row])!)
     }
 
     /*
