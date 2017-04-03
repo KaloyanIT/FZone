@@ -13,6 +13,8 @@
 		E3067AA51E884B6200784670 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA41E884B6200784670 /* HttpRequester.swift */; };
 		E3067AA71E884C0A00784670 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */; };
 		E31233D51E8DA7CB00322AF1 /* AddFoodModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */; };
+		E320503D1E9205990093A7B9 /* DailyFoodMappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320503C1E9205990093A7B9 /* DailyFoodMappings.swift */; };
+		E320503F1E9206110093A7B9 /* DailyFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320503E1E9206110093A7B9 /* DailyFood.swift */; };
 		E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */; };
 		E32A3D9E1E9180120095B2BE /* FoodSQLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */; };
 		E32A3DA11E91859C0095B2BE /* FoodSQLDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A3DA01E91859C0095B2BE /* FoodSQLDataDelegate.swift */; };
@@ -63,6 +65,8 @@
 		E3067AA41E884B6200784670 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = HttpRequester/HttpRequester.swift; sourceTree = "<group>"; };
 		E3067AA61E884C0A00784670 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequester/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		E31233D41E8DA7CB00322AF1 /* AddFoodModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFoodModalViewController.swift; path = ViewControllers/Modals/AddFoodModalViewController.swift; sourceTree = "<group>"; };
+		E320503C1E9205990093A7B9 /* DailyFoodMappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyFoodMappings.swift; path = Models/DailyFoodMappings.swift; sourceTree = "<group>"; };
+		E320503E1E9206110093A7B9 /* DailyFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyFood.swift; path = Models/DailyFood.swift; sourceTree = "<group>"; };
 		E32A3D9B1E917F7F0095B2BE /* FoodHttpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodHttpData.swift; path = Data/FoodHttpData.swift; sourceTree = "<group>"; };
 		E32A3D9D1E9180120095B2BE /* FoodSQLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSQLData.swift; sourceTree = "<group>"; };
 		E32A3DA01E91859C0095B2BE /* FoodSQLDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodSQLDataDelegate.swift; path = Data/Delegates/FoodSQLDataDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				E35177511E898D8500474558 /* Food.swift */,
 				E3E6990C1E914C5B00347C8A /* FoodMappings.swift */,
 				E32A3DA41E9196BC0095B2BE /* FoodSQL.swift */,
+				E320503C1E9205990093A7B9 /* DailyFoodMappings.swift */,
+				E320503E1E9206110093A7B9 /* DailyFood.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E320503D1E9205990093A7B9 /* DailyFoodMappings.swift in Sources */,
 				E3067AA21E8843A100784670 /* LoginViewController.swift in Sources */,
 				E3CF2A2C1E91B98200C12BE4 /* FavoritesTableViewController.swift in Sources */,
 				E351774F1E898C5A00474558 /* FoodTableViewController.swift in Sources */,
@@ -537,6 +544,7 @@
 				E34C797C1E86B8000004D499 /* LoadingExtensions.swift in Sources */,
 				E3E6990F1E916BD900347C8A /* UpdateSearchResultsExtension.swift in Sources */,
 				E3CF2A2E1E91BD3900C12BE4 /* FavoriteDetailsViewController.swift in Sources */,
+				E320503F1E9206110093A7B9 /* DailyFood.swift in Sources */,
 				E38029ED1E89BC5F00B5EB36 /* FoodDetailsViewController.swift in Sources */,
 				E34F0D101E91026C006CB56F /* ProfileDetailsFormsViewController.swift in Sources */,
 				E32A3D9C1E917F7F0095B2BE /* FoodHttpData.swift in Sources */,
