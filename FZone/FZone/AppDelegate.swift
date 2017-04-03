@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var http: HttpRequester?
-    var baseUrl: String = "http://192.168.0.103:3001/api"
+    var baseUrl: String = "http://192.168.196.167:3001/api"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
